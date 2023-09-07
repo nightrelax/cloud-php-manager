@@ -664,7 +664,7 @@ function isHideFile($name) {
     ];
 
     if ($name == getConfig('passfile')) return true;
-    if (substr($name, 0, 1) == '.') return true;
+    //if (substr($name, 0, 1) == '.') return true;
     if (getConfig('hideFunctionalityFile')) if (in_array(strtolower($name), $FunctionalityFile)) return true;
     return false;
 }
