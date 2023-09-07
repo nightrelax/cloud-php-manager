@@ -1,3 +1,9 @@
+change by LinhOliver
+Disable hide file first dot in Common.php line 667
+>>  if (substr($name, 0, 1) == '.') return true;
+
+
+
 [中文readme](readme_cn.md)  
 
 # NOTICE: 
