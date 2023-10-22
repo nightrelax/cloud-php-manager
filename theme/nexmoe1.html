@@ -51,47 +51,15 @@
             /*.mdui-toolbar>*{display:none}*/
             .mdui-toolbar>a:last-child,.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child{display:block}
         }
-		#formquicksearch {
-		  margin: 5px 5px 0px 5px;
-		  width: 100%; /* Full-width */
-		  font-size: large; /* Increase font-size */
-		  padding: 12px 20px 12px 40px; /* Add some padding */
-		  border: 1px solid #ddd; /* Add a grey border */
-		  margin-bottom: 12px; /* Add some space below the input */
-		}
     </style>
     <!--customCss-->
 	<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
-	<script>
-	function quicksearch() {
-	  // Declare variables
-	  var input, filter, table, tr, td, i, txtValue;
-	  input = document.getElementById("formquicksearch");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("formsearch");
-	  tr = table.getElementsByTagName("tr");
-
-	  // Loop through all table rows, and hide those who dont match the search query
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		  txtValue = td.textContent || td.innerText;
-		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
 </head>
 <body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
 	<div class="mdui-container">
 	    <div class="mdui-container-fluid">
             <div class="mdui-toolbar nexmoe-item" id="toolbar">
                 <a href="<!--base_path-->"><!--Sitename--></a>
-				<input type="text" id="formquicksearch" onkeyup="quicksearch()" placeholder="Tìm nhanh..">
 <!--MultiDiskAreaStart-->
                 <i class="mdui-icon material-icons mdui-icon-dark" style="margin:0;">chevron_right</i>
                 <div class="more-disk">
@@ -233,7 +201,7 @@
     </style>
     <div class="nexmoe-item">
 
-    <div class="mdui-row" id="formsearch">
+    <div class="mdui-row">
         <ul class="mdui-list">
             <li class="mdui-list-item th">
               <div class="mdui-col-xs-12 mdui-col-sm-7"><!--constStr@File--> <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="downward">expand_more</i></div>
